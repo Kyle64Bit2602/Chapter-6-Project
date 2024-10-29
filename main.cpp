@@ -18,7 +18,16 @@ int main()
 
 int totalDays()
 {
+	/*
+	Accepts no arguments
+	Calculates nothing
+	Returns days
+	*/
+	int days = 0;
 
+	cout << "How many days did you spend on the trip in total? ";
+	cin >> days;
+	return days;
 }
 void departTime()
 {
