@@ -31,8 +31,8 @@ graph TD;
 | `main`    |               |  Kyle     |
 | ------------------ | ------------- | ------------ |
 | `argument:double`    | takes input from the user for: N/A  |              |
-| `time:integer`     | calculates ____  | outputs ____             |
-| `name:string`      | takes input for ___ | returns ____ |
+| `time:integer`     | calculates cost of trip  | outputs cost             |
+| `name:string`      | takes input for N/A | returns N/A |
 ***
 | `totalDays`    |               |  Kyle     |
 | ------------------ | ------------- | ------------ |
