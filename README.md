@@ -29,11 +29,11 @@ graph TD;
 
 #### Function Diagrams
 
-| `main`              |                             | Kyle          |
-| ------------------- | --------------------------- | ------------- |
-| `argument: double`  | Takes input from the user for: N/A |             |
-| `time: integer`     | Calculates cost of trip             | Outputs cost |
-| `name: string`      | Takes input for N/A                 | Returns N/A  |
+| `main`               |                                                                                                                                                    | Kyle           |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| `argument: N/A`      | Calls all other functions: `totalDays`, `departTime`, `airfaireCost`, `carRentals`, `conferenceFees`, `hotelExpenses`, and `meals`                | |
+| `calculations: double` | Calculates total expenses, total allowable expenses, excess costs to be reimbursed, and savings if expenses are under the allowable amount        | Outputs final expense report, including total, excess, and savings |
+| `validation: boolean` | Ensures no negative inputs for dollar amounts or miles driven, at least one day on trip, and valid departure/arrival times                      | Returns final trip summary | 
 
 ***
 
