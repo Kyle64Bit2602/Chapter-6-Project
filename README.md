@@ -4,7 +4,7 @@
 Kyle, Mason, Gideon
 
 ## Travel Expenses Desc
-Outputs the total days on the trip, the time of departure, the amount of round-trip afaire, amount of car rentals,
+Outputs the total days on the trip, the time of departure, the amount of round-trip affaire, amount of car rentals,
 miles driven, parking fees, taxi fees, conference/seminar registration fees, hotel expenses,
 and the amount of each meal eaten.
 
@@ -28,51 +28,59 @@ graph TD;
 ```
 
 #### Function Diagrams
-| `main`    |               |  Kyle     |
-| ------------------ | ------------- | ------------ |
-| `argument:double`    | takes input from the user for: N/A  |              |
-| `time:integer`     | calculates cost of trip  | outputs cost             |
-| `name:string`      | takes input for N/A | returns N/A |
+
+| Function Name       | Description                         | Developer       |
+| ------------------- | ----------------------------------- | --------------- |
+| `main`              | Calculates and outputs the total cost of the trip. | Kyle          |
+| **Arguments**       | `double`: takes user input for N/A. |                |
+| **Time**            | `integer`: calculates the cost of the trip. | Outputs cost.  |
+| **Name**            | `string`: takes input for N/A.      | Returns N/A.   |
+
 ***
-| `totalDays`    |               |  Kyle     |
-| ------------------ | ------------- | ------------ |
-| `argument:double`    | takes input from the user for: The total number of days spent on the trip  |              |
-| `time:integer`     | calculates N/A  | outputs N/A             |
-| `name:string`      | takes input for days | returns days |
+
+| `totalDays`         | Counts total days spent on trip.     | Kyle           |
+| **Arguments**       | `double`: takes user input for days spent. |             |
+| **Time**            | `integer`: N/A.                      | Outputs N/A.   |
+| **Name**            | `string`: receives days.             | Returns days.  |
+
 ***
-| `departTime`    |               |     Mason   |
-| ------------------ | ------------- | ------------ |
-| `argument:double`    | takes input from the user for: The time of departure on the first day of the trip, and the time of arrival back home on the last day of the trip  |              |
-| `time:integer`     | calculates N/A  | outputs N/A             |
-| `name:string`      | takes input for depart and arrival | returns depart and arrival |
+
+| `departTime`        | Records departure and arrival times. | Mason          |
+| **Arguments**       | `double`: departure and arrival times. |              |
+| **Time**            | `integer`: N/A.                      | Outputs N/A.   |
+| **Name**            | `string`: receives times.            | Returns times. |
+
 ***
-| `airfaireCost`    |               |     Mason   |
-| ------------------ | ------------- | ------------ |
-| `argument:double`    | takes input from the user for: The amount of any round-trip airfare  |              |
-| `time:integer`     | calculates N/A  | outputs N/A             |
-| `name:string`      | takes input for round-trip | returns round-trip |
+
+| `airfaireCost`      | Calculates round-trip airfare cost.  | Mason          |
+| **Arguments**       | `double`: amount for round-trip airfare. |              |
+| **Time**            | `integer`: N/A.                      | Outputs N/A.   |
+| **Name**            | `string`: receives airfare amount.   | Returns total. |
+
 ***
-| `carRentals`    |               |     Gideon   |
-| ------------------ | ------------- | ------------ |
-| `argument:type`    | takes input from the user for ____  |              |
-| `time:integer`     | calculates ______  | outputs ____             |
-| `name:string`      | takes input for name ___ | returns total |
+
+| `carRentals`        | Records car rental costs.            | Gideon         |
+| **Arguments**       | `double`: rental cost.               |                |
+| **Time**            | `integer`: N/A.                      | Outputs N/A.   |
+| **Name**            | `string`: receives car rental cost.  | Returns total. |
+
 ***
-| `conferenceFees`    |               |     Mason   |
-| ------------------ | ------------- | ------------ |
-| `argument:type`    | takes input from the user for ____  |              |
-| `time:integer`     | calculates ______  | outputs ____             |
-| `name:string`      | takes input for name ___ | returns total |
+
+| `conferenceFees`    | Records conference registration fees. | Mason         |
+| **Arguments**       | `double`: registration fee.          |                |
+| **Time**            | `integer`: N/A.                      | Outputs N/A.   |
+| **Name**            | `string`: receives registration fee. | Returns total. |
+
 ***
-| `hotelExpenses`    |               |     Gideon   |
-| ------------------ | ------------- | ------------ |
-| `argument:type`    | takes input from the user for ____  |              |
-| `time:integer`     | calculates ______  | outputs ____             |
-| `name:string`      | takes input for name ___ | returns total |
+
+| `hotelExpenses`     | Calculates hotel expenses.           | Gideon         |
+| **Arguments**       | `double`: nightly hotel rate.        |                |
+| **Time**            | `integer`: calculates total lodging costs. | Outputs N/A. |
+| **Name**            | `string`: receives nightly rate.     | Returns total. |
+
 ***
-| `meals`    |               |     Gideon   |
-| ------------------ | ------------- | ------------ |
-| `argument:type`    | takes input from the user for ____  |              |
-| `time:integer`     | calculates ______  | outputs ____             |
-| `name:string`      | takes input for name ___ | returns total |
-***
+
+| `meals`             | Records meal expenses within limits. | Gideon         |
+| **Arguments**       | `double`: amount for each meal type. |                |
+| **Time**            | `integer`: checks meal allowances based on time. | Outputs excess or savings. |
+| **Name**            | `string`: receives meal expenses.    | Returns total. |
