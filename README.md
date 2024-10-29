@@ -12,75 +12,82 @@ and the amount of each meal eaten.
 ```mermaid
 graph TD;
   main-->totalDays;
-  main-->departTime;
-  main-->airfaireCost;
-  main-->carRentals;
-  main-->conferenceFees;
-  main-->hotelExpenses;
-  main-->meals;
   totalDays-->main;
+  main-->departTime;
   departTime-->main;
+  main-->airfaireCost;
   airfaireCost-->main;
+  main-->carRentals;
   carRentals-->main;
+  main-->conferenceFees;
   conferenceFees-->main;
+  main-->hotelExpenses;
   hotelExpenses-->main;
+  main-->meals;
   meals-->main;
 ```
 
 #### Function Diagrams
 
-| Function Name       | Description                         | Developer       |
-| ------------------- | ----------------------------------- | --------------- |
-| `main`              | Calculates and outputs the total cost of the trip. | Kyle          |
-| **Arguments**       | `double`: takes user input for N/A. |                |
-| **Time**            | `integer`: calculates the cost of the trip. | Outputs cost.  |
-| **Name**            | `string`: takes input for N/A.      | Returns N/A.   |
+| `main`              |                             | Kyle          |
+| ------------------- | --------------------------- | ------------- |
+| `argument: double`  | Takes input from the user for: N/A |             |
+| `time: integer`     | Calculates cost of trip             | Outputs cost |
+| `name: string`      | Takes input for N/A                 | Returns N/A  |
 
 ***
 
-| `totalDays`         | Counts total days spent on trip.     | Kyle           |
-| **Arguments**       | `double`: takes user input for days spent. |             |
-| **Time**            | `integer`: N/A.                      | Outputs N/A.   |
-| **Name**            | `string`: receives days.             | Returns days.  |
+| `totalDays`         |                                                                                                        | Kyle           |
+| ------------------- | ------------------------------------------------------------------------------------------------------ | -------------  |
+| `argument: double`  | Takes input from the user for: Total number of days spent on the trip, time of departure, and time of arrival | |
+| `time: integer`     | Calculates N/A                                                                                         | Outputs N/A |
+| `name: string`      | Takes input for days, departure, and arrival times                                                     | Returns days, departure, and arrival times |
 
 ***
 
-| `departTime`        | Records departure and arrival times. | Mason          |
-| **Arguments**       | `double`: departure and arrival times. |              |
-| **Time**            | `integer`: N/A.                      | Outputs N/A.   |
-| **Name**            | `string`: receives times.            | Returns times. |
+| `departTime`        |                             | Mason          |
+| ------------------- | --------------------------- | -------------  |
+| `argument: double`  | Takes input from the user for Time of departure and time of arrival back home | |
+| `time: integer`     | Calculates N/A                        | Outputs N/A |
+| `name: string`      | Takes input for depart and arrival    | Returns depart and arrival |
 
 ***
 
-| `airfaireCost`      | Calculates round-trip airfare cost.  | Mason          |
-| **Arguments**       | `double`: amount for round-trip airfare. |              |
-| **Time**            | `integer`: N/A.                      | Outputs N/A.   |
-| **Name**            | `string`: receives airfare amount.   | Returns total. |
+| `airfaireCost`      |                                                           | Mason          |
+| ------------------- | --------------------------------------------------------- | -------------  |
+| `argument: double`  | Takes input from the user for: Round-trip airfare amount  | |
+| `time: integer`     | Calculates N/A                                            | Outputs N/A |
+| `name: string`      | Takes input for round-trip airfare                        | Returns airfare cost |
+***
+
+| `carRentals`        |                                                                                               | Gideon         |
+| ------------------- | --------------------------------------------------------------------------------------------- | -------------  |
+| `argument: double`  | Takes input from the user for: Car rental cost, miles driven, parking fees, and taxi fees     | |
+| `miles: double`     | Calculates vehicle expense at $0.27 per mile driven                                           | Outputs vehicle expense |
+| `parking: double`   | Calculates parking fee allowance (up to $6 per day)                                           | Outputs excess parking cost if applicable |
+| `taxi: double`      | Calculates taxi fee allowance (up to $10 per day)                                             | Outputs excess taxi cost if applicable |
+| `name: string`      | Takes input for car rentals, mileage, parking, and taxi fees                                  | Returns total car rental and related expenses |
 
 ***
 
-| `carRentals`        | Records car rental costs.            | Gideon         |
-| **Arguments**       | `double`: rental cost.               |                |
-| **Time**            | `integer`: N/A.                      | Outputs N/A.   |
-| **Name**            | `string`: receives car rental cost.  | Returns total. |
+| `conferenceFees`    |                                                                | Mason          |
+| ------------------- | -------------------------------------------------------------- | -------------  |
+| `argument: double`  | Takes input from the user for: Conference or seminar registration fees | |
+| `time: integer`     | Calculates N/A                                                 | Outputs N/A |
+| `name: string`      | Takes input for registration fees                              | Returns total conference fees |
 
 ***
 
-| `conferenceFees`    | Records conference registration fees. | Mason         |
-| **Arguments**       | `double`: registration fee.          |                |
-| **Time**            | `integer`: N/A.                      | Outputs N/A.   |
-| **Name**            | `string`: receives registration fee. | Returns total. |
+| `hotelExpenses`     |                                                                              | Gideon         |
+| ------------------- | ---------------------------------------------------------------------------- | -------------  |
+| `argument: double`  | Takes input from the user for: Nightly hotel expenses                         | |
+| `allowance: double` | Calculates lodging allowance (up to $90 per night)                            | Outputs excess lodging cost if applicable |
+| `name: string`      | Takes input for nightly hotel rate                                           | Returns total hotel expenses, including any excess |
 
 ***
 
-| `hotelExpenses`     | Calculates hotel expenses.           | Gideon         |
-| **Arguments**       | `double`: nightly hotel rate.        |                |
-| **Time**            | `integer`: calculates total lodging costs. | Outputs N/A. |
-| **Name**            | `string`: receives nightly rate.     | Returns total. |
-
-***
-
-| `meals`             | Records meal expenses within limits. | Gideon         |
-| **Arguments**       | `double`: amount for each meal type. |                |
-| **Time**            | `integer`: checks meal allowances based on time. | Outputs excess or savings. |
-| **Name**            | `string`: receives meal expenses.    | Returns total. |
+| `meals`             |                                                                                                                                            | Gideon         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | -------------  |
+| `argument: double`  | Takes input from the user for: Meal expenses (breakfast, lunch, dinner) based on departure and arrival times                               | |
+| `allowance: double` | Calculates meal allowance (up to $9 for breakfast, $12 for lunch, $16 for dinner); adjusts based on time of departure/arrival requirements | Outputs excess meal cost if applicable |
+| `name: string`      | Takes input for meal costs and times of departure/arrival                                                                                  | Returns total meal expenses, including any excess |
