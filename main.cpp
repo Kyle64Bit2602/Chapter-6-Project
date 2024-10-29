@@ -23,7 +23,7 @@ int totalDays()
 	Calculates nothing
 	Returns days
 	*/
-	int days = 0;
+	int days;
 
 	cout << "How many days did you spend on the trip in total? ";
 	cin >> days;
