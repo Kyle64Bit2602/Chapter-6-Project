@@ -11,10 +11,20 @@ and the amount of each meal eaten.
 ### Travel Expenses Flowchart
 ```mermaid
 graph TD;
-  A-->B;
-  A-->C;
-  A-->D;
-  A-->E;
+  main-->totalDays;
+  main-->departTime;
+  main-->airfaireCost;
+  main-->carRentals;
+  main-->conferenceFees;
+  main-->hotelExpenses;
+  main-->meals;
+  totalDays-->main;
+  departTime-->main;
+  airfaireCost-->main;
+  carRentals-->main;
+  conferenceFees-->main;
+  hotelExpenses-->main;
+  meals-->main;
 ```
 
 #### Function Diagrams
