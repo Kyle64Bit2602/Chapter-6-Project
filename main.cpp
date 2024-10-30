@@ -23,7 +23,9 @@ int main()
 	*/
 
 	double totalCosts;
-
+	double leave, arrival;
+	//departTime(leave, arrival)
+	
 	cout << "Welcome to the Travel Expenses Calculator.\n";
 	cout << "Please fill out every necessary field.\n";
 
@@ -55,10 +57,19 @@ int totalDays()
 	cin >> days;
 	return days;
 }
-void departTime()
+void departTime(double& leave, double& arrival)
 {
+	/* 
+	Accepts 2 arguments
+	The time of departure on the first day of the trip,
+	and the time of arrival back home on the last day of the trip.
+	*/
 
-}
+	cout << "What time did you depart for the trip (ex: 705 is 7:05):  ";
+	cin >> leave;
+
+	cout << "What time did you return from the trip (ex: 724 is 7:24): ";
+	cin >> arrival;
 
 double airfaireCost()
 {
