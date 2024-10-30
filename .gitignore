@@ -69,6 +69,10 @@ ScaffoldingReadMe.txt
 StyleCopReport.xml
 
 # Files built by Visual Studio
+
+*.filters
+*.vcxproj
+*.sln 
 *.sln
 *.vcxproj
 *.filter
