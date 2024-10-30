@@ -55,6 +55,14 @@ int totalDays()
 
 	cout << "How many days did you spend on the trip in total? ";
 	cin >> days;
+
+	while (days <= 1)
+	{
+		cout << endl << "Invalid cost, try again." << endl;
+		cout << "How many days did you spend on the trip in total? ";
+		cin >> days;
+	}
+
 	return days;
 }
 
