@@ -48,16 +48,16 @@ graph TD;
 | `departTime`        |                             | Mason          |
 | ------------------- | --------------------------- | -------------  |
 | `argument: double`  | Takes input from the user for Time of departure and time of arrival back home | |
-| `time: integer`     | Calculates N/A                        | Outputs N/A |
-| `name: string`      | Takes input for depart and arrival    | Returns depart and arrival |
+| `function: void`     | Calculates N/A                        | Outputs N/A |
+|       | Takes input for depart and arrival    | Returns depart and arrival |
 
 ***
 
 | `airfaireCost`      |                                                           | Mason          |
 | ------------------- | --------------------------------------------------------- | -------------  |
 | `argument: double`  | Takes input from the user for: Round-trip airfare amount  | |
-| `time: integer`     | Calculates N/A                                            | Outputs N/A |
-| `name: string`      | Takes input for round-trip airfare                        | Returns airfare cost |
+| `function: integer`     | Calculates N/A                                            | Outputs N/A |
+|       | Takes input for round-trip airfare                        | Returns airfare cost |
 ***
 
 | `carRentals`        |                                                                                               | Gideon         |
