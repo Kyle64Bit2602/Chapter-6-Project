@@ -110,7 +110,24 @@ double carRentals()
 
 double conferenceFees()
 {
+	/*
+	* accepts 1 argument
+	* Conference or seminar registration fees
+	*/
 
+	double conference;
+
+	cout << "How much does it cost for Conference or seminar registration: $";
+	cin >> conference;
+
+	while (conference <= 0)
+	{
+		cout << endl << "Invalid cost, try again." << endl;
+		cout << "How much does it cost for Conference or seminar registration: $";
+		cin >> conference;
+	}
+
+	return conference;
 }
 
 double hotelExpenses();
