@@ -1,0 +1,4 @@
+﻿  meals.cpp
+C:\Users\2017059\Documents\GitHub\Chapter-6-Project\meals\meals\meals.cpp(71,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\2017059\Documents\GitHub\Chapter-6-Project\meals\meals\meals.cpp(119,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  meals.vcxproj -> C:\Users\2017059\Documents\GitHub\Chapter-6-Project\meals\x64\Debug\meals.exe
