@@ -57,9 +57,10 @@ int totalDays()
 	cin >> days;
 	return days;
 }
+
 void departTime(double& leave, double& arrival)
 {
-	/* 
+	/*
 	Accepts 2 arguments
 	The time of departure on the first day of the trip,
 	and the time of arrival back home on the last day of the trip.
@@ -70,6 +71,7 @@ void departTime(double& leave, double& arrival)
 
 	cout << "What time did you return from the trip (ex: 724 is 7:24): ";
 	cin >> arrival;
+}
 
 double airfaireCost()
 {
