@@ -5,7 +5,7 @@ using namespace std;
 
 int totalDays();
 void departTime();
-double airfaireCost();
+double airfareCost();
 double carRentals();
 double conferenceFees();
 double hotelExpenses();
@@ -23,16 +23,16 @@ int main()
 	*/
 
 	double totalCosts;
-	double leave, arrival;
+	int leave, arrival;
 	//departTime(leave, arrival)
-	
+
 	cout << "Welcome to the Travel Expenses Calculator.\n";
 	cout << "Please fill out every necessary field.\n";
 
 
 	int days = totalDays();
-	string leave, arrival = departTime();
-	double airCost = airfaireCost();
+	int leave, arrival = departTime(leave, arrival);
+	double airCost = airfareCost();
 	double conference = conferenceFees();
 	double rentals = carRentals();
 	double hotel = hotelExpenses();
@@ -55,10 +55,18 @@ int totalDays()
 
 	cout << "How many days did you spend on the trip in total? ";
 	cin >> days;
+
+	while (days <= 1)
+	{
+		cout << endl << "Invalid cost, try again." << endl;
+		cout << "How many days did you spend on the trip in total? ";
+		cin >> days;
+	}
+
 	return days;
 }
 
-void departTime(double& leave, double& arrival)
+int departTime(int& leave, int& arrival)
 {
 	/*
 	Accepts 2 arguments
@@ -73,9 +81,26 @@ void departTime(double& leave, double& arrival)
 	cin >> arrival;
 }
 
-double airfaireCost()
+double airfareCost()
 {
+	/*
+	* Accept 1 arguments
+	* The amount of any round-trip airfare
+	*/
 
+	double airCost;
+
+	cout << "How much does it cost for a round-trip: $";
+	cin >> airCost;
+
+	while (airCost <= 0)
+	{
+		cout << endl << "Invalid cost, try again." << endl;
+		cout << "How much does it cost for a round-trip: $";
+		cin >> airCost;
+	}
+
+	return airCost;
 }
 
 double carRentals()
@@ -85,7 +110,24 @@ double carRentals()
 
 double conferenceFees()
 {
+	/*
+	* accepts 1 argument
+	* Conference or seminar registration fees
+	*/
 
+	double conference;
+
+	cout << "How much does it cost for Conference or seminar registration: $";
+	cin >> conference;
+
+	while (conference <= 0)
+	{
+		cout << endl << "Invalid cost, try again." << endl;
+		cout << "How much does it cost for Conference or seminar registration: $";
+		cin >> conference;
+	}
+
+	return conference;
 }
 
 double hotelExpenses();
