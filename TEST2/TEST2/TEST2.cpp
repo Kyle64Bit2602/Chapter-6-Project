@@ -4,7 +4,7 @@
 using namespace std;
 
 int totalDays();
-void departTime();
+int departTime();
 double airfareCost();
 double carRentals();
 double conferenceFees();
@@ -23,15 +23,11 @@ int main()
 	*/
 
 	double totalCosts;
-	int leave, arrival;
 	//departTime(leave, arrival)
 
 	cout << "Welcome to the Travel Expenses Calculator.\n";
 	cout << "Please fill out every necessary field.\n";
 
-
-	int days = totalDays();
-	int leave, arrival = departTime(leave, arrival);
 	double airCost = airfareCost();
 	double conference = conferenceFees();
 	double rentals = carRentals();
@@ -41,7 +37,7 @@ int main()
 	totalCosts = airCost + rentals
 		+ rentals + hotel + meal;
 
-
+	cout << "\n\nYou spent a total of $" << totalCosts << " on the trip.";
 }
 
 int totalDays()
@@ -58,7 +54,7 @@ int totalDays()
 
 	while (days <= 1)
 	{
-		cout << endl << "Invalid cost, try again." << endl;
+		cout << endl << "Invalid amount, must be over 1. Try again." << endl;
 		cout << "How many days did you spend on the trip in total? ";
 		cin >> days;
 	}
@@ -66,19 +62,23 @@ int totalDays()
 	return days;
 }
 
-int departTime(int leave, int arrival)
+int departTime()
 {
+
+	int leave, arrival;
 	/*
 	Accepts 2 arguments
 	The time of departure on the first day of the trip,
 	and the time of arrival back home on the last day of the trip.
 	*/
 
-	cout << "What time did you depart for the trip (ex: 705 is 7:05):  ";
+	cout << "What time did you depart for the trip (ex. enter 7:00 as 700): ";
 	cin >> leave;
 
-	cout << "What time did you return from the trip (ex: 724 is 7:24): ";
+	cout << "What time did you return from the trip (ex. enter 7:00 as 700): ";
 	cin >> arrival;
+
+	return leave, arrival;
 }
 
 double airfareCost()
@@ -162,7 +162,7 @@ double conferenceFees()
 	return conference;
 }
 
-double hotelExpenses();
+double hotelExpenses()
 {
 	double expense;
 	do
@@ -182,11 +182,11 @@ double hotelExpenses();
 	return expense - 90;
 }
 
-double meals();
+double meals()
 {
 	int dep = 0, arrival;
 	double breakfast = 0, lunch = 0, dinner = 0;
-	arrival = departTimeM();
+	arrival = departTime();
 	dep = arrival / 10000;
 	arrival = (arrival - (dep * 10000));
 	cout << arrival << " " << dep;
